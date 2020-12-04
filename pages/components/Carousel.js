@@ -13,9 +13,9 @@ const Carousel = ({
   const [bullets, setBullets] = useState(null);
   let touchStore;
   const slideWidth = (100 / (itemsPerPage || 1));
-  const carouselWidth = (children.length * slideWidth);
-  const movePercentage = (100 / children.length);
-  const numberOfPages = (Math.ceil(children.length / (itemsPerPage || 1)));
+  const carouselWidth = (((children && children.length) || 1) * slideWidth);
+  const movePercentage = (100 / ((children && children.length) || 1));
+  const numberOfPages = (Math.ceil(((children && children.length) || 1) / (itemsPerPage || 1)));
 
   const goNextPosition = () => {
     if (position < (numberOfPages - 1)) {

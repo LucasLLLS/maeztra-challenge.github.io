@@ -205,8 +205,8 @@ const ProductsCarousel = () => {
       <div className={styles.ProductCarousel}>
         <Carousel itemsPerPage={5}>
           {
-            products.map((product) => (
-              <div className={styles.Product}>
+            products.map((product, key) => (
+              <div className={styles.Product} key={key}>
                 <img src={product.thumb} className={styles.ProductThumb} />
                 <div className={styles.ProductSkusBox}>
                   {
