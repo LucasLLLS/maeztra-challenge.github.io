@@ -1,0 +1,115 @@
+@import '../colors';
+@import '../utils';
+
+.Footer {
+  display: block;
+  width: 100%;
+
+  .FooterLinks {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 1000px;
+    margin: 40px auto;
+    button {
+      display: none;
+    }
+    b {
+      display: block;
+    }
+    .FooterLinksBlock {
+      display: block;
+      line-height: 42px;
+      width: 100%;
+      b, a {
+        display: block;
+      }
+    }
+    @media (max-width: 767px) {
+      display: block;
+      padding: 0 15px;
+      margin-top: 0;
+
+      b {
+        display: none !important;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-weight: 700;
+        display: block;
+        padding: 0;
+        font-size: 16px;
+        position: relative;
+        width: 100%;
+        text-align-last: left;
+        height: 40px;
+        &:focus {
+          outline: none;
+        }
+        &:after {
+          content: '+';
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-weight: 700;
+          font-size: 18px;
+          display: block;
+        }
+        &.isActive {
+          &:after {
+            content: '-';
+          }
+        }
+      }
+
+      .FooterLinksContent {
+        display: none;
+        padding-left: 20px;
+        &.isActive {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.FotterU {
+  background-color: $secondary-color;
+  width: 100%;
+  > div {
+    align-items: center;
+    display: flex;
+    height: 83px;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      height: auto;
+      flex-direction: column;
+      padding: 30px 40px;
+    }
+  }
+  .FooterUBlock {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 767px) {
+      justify-content: space-between;
+      margin-bottom: 20px;
+      width: 250px;
+    }
+    a, span {
+      margin-right: 12px;
+      &.FooterLogos {
+        margin-right: 20px;
+      }
+    }
+    small {
+      color: #FFFFFF;
+      display: block;
+      font-size: 10px;
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+  }
+}

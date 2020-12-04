@@ -1,0 +1,31 @@
+@import '../colors';
+@import '../utils';
+
+.SearchBarWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.SearchBarBtn {
+  border-radius: 8px;
+  font-size: 14px;
+  position: absolute;
+  font-weight: 400;
+  right: 0;
+  top: 0;
+  width: 120px;
+}
+
+.SearchBar {
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  padding: 0 10px;
+  position: relative;
+  text-transform: capitalize;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}

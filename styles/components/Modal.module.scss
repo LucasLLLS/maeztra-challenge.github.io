@@ -1,0 +1,55 @@
+.ModalWrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+
+  .Modal {
+    height: 530px;
+    width: 850px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 1;
+    background-color: #fff;
+    z-index: 2;
+    max-width: 100%;
+    @media (max-width: 767px) {
+      width: 300px;
+      height: 307px;
+    }
+  }
+
+  .ModalClose {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .ModalShadow {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

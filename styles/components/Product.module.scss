@@ -1,0 +1,67 @@
+@import '../colors';
+@import '../utils';
+
+.Product {
+  padding: 0 10px;
+}
+
+.ProductSkusBox {
+  display: flex;
+  margin: 8px 0;
+  .ProductSkuColor {
+    border-radius: 3px;
+    border: none;
+    display: flex;
+    height: 27px;
+    margin-right: 8px;
+    width: 27px;
+    &:focus {
+      border: 1px solid #000;
+    }
+  }
+}
+
+.ProductPrice {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.ProductName {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.ProductDescription {
+  font-size: 12px;
+  opacity: 0.5;
+  margin: 4px 0;
+}
+
+.ProductAddToCart {
+  display: block;
+  font-size: 16px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.ProductThumb {
+  width: 100%;
+}
+
+.ProductCarousel {
+  display: block;
+}
+
+.ProductCarouselMobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .ProductCarousel {
+    display: none;
+  }
+  .ProductCarouselMobile {
+    display: block;
+  }
+}

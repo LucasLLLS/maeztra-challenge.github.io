@@ -1,0 +1,79 @@
+@import '../colors';
+@import '../utils';
+
+.CarouselWrapper {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.Carousel {
+  display: flex;
+  transition: transform linear 0.3s;
+}
+
+.CarouselBullets {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  @media (max-width: 767px) {
+    bottom: 20px;
+  }
+  button {
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    background: transparent;
+    height: 16px;
+    width: 16px;
+    padding: 0;
+    margin: 0 6px;
+    &:hover {
+      cursor: pointer;
+    }
+    @media (max-width: 767px) {
+      width: 8px;
+      height: 8px;
+      margin: 4px 12px;
+    }
+    &.isActive {
+      background-color: $primary-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.CarouselArrow {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+  &.CarouselArrowLeftMobile {
+    left: 10px;
+  }
+  &.CarouselArrowRightMobile {
+    right: 10px;
+  }
+}
+
+.CarouselArrowLeftMobile, .CarouselArrowRightMobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .CarouselArrowLeftMobile, .CarouselArrowRightMobile {
+    display: block;
+  }
+  .CarouselArrowLeft, .CarouselArrowRight {
+    display: none;
+  }
+}
