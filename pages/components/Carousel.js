@@ -18,8 +18,6 @@ const Carousel = ({
   const numberOfPages = (Math.ceil(children.length / (itemsPerPage || 1)));
 
   const goNextPosition = () => {
-    console.log('position ====> ', position);
-    console.log('numberOfPages ====> ', numberOfPages);
     if (position < (numberOfPages - 1)) {
       setPosition(position + 1);
     } else {
